@@ -1,27 +1,53 @@
 /*************** CalendarJS ***************/
- #calendarjs-tip{position:absolute;display:block;border: 15px solid;}
+ .calendarjs-tip{position:absolute;display:block;border: 15px solid;}
 
- #calendarjs{background-color: #666;display: block;position: absolute;border-radius: 6px;box-shadow: 0 0 6px #444;font-family:sans-serif;}
- #calendarjs hr{height: 1px;margin: 0;background: #888;display:none;width:100%;padding:0;border: none;width: 90%;margin: 0 auto;}
- #calendarjs table td{cursor: pointer;}
+ .calendarjs{display: none;position: absolute;border-radius: 6px;box-shadow: 0 0 6px #444;font-family:sans-serif;padding:0 4px}
+ .calendarjs td{cursor: pointer;}
 
- #calendarjs > .month-selector{color: white;border-radius: 6px 6px 0 0}
- #calendarjs > .year-selector{color: white;}
- #calendarjs > .month-selector > h4{text-align: center;margin: 0;padding: 8px}
- #calendarjs > .year-selector > h5{text-align: center;margin: 0;padding: 8px}
+.calendarjs .month-selector > h4{text-align: center;margin: 0;}
+.calendarjs .month-selector > *{display: inline}
+.calendarjs .month-selector{text-align: center;padding: 10px 0 10px 0}
 
- #calendarjs .btn-selector{border:none;color: lightgrey;background-color: transparent;padding: .5em 1.5em;margin: 0;font-size: x-small}
- #calendarjs .controls{border-radius:0 0 6px 6px;padding: 8px 0}
- #calendarjs .controls a{display: inline-block;width:50%;height: 12px;transition:.3s;cursor: pointer;}
- #calendarjs .controls a:hover{height: 20px;transition:.3s}
- #calendarjs .controls .accept{background-image: url(./img/accept.svg);background-repeat: no-repeat;background-position: center;}
- #calendarjs .controls .cancel{background-image: url(./img/cancel.svg);background-repeat: no-repeat;background-position: center;}
+.calendarjs .year-selector{text-align: center;padding: 10px 0 0 0}
+.calendarjs .year-selector > h5{text-align: center;margin: 0;}
+.calendarjs .year-selector > *{display: inline}
 
- #calendarjs table{background-color: grey;}
- #calendarjs table th{color: white}
- #calendarjs table td, #calendarjs table th{padding: 4px 6px;text-align: center}
+ .calendarjs .btn-selector{border:none;color: lightgrey;background-color: transparent;padding: .5em 1.5em;margin: 0;font-size: x-small}
+ .calendarjs .controls{border-radius:0 0 6px 6px;padding: 8px 0}
+ .calendarjs .controls a{width:40%;display: inline-block;height: 12px;transition:.3s;cursor: pointer;}
+ .calendarjs .controls a:hover{height: 15px;transition:.3s}
+ .calendarjs .controls .accept{float:left;background-image: url(./img/accept.svg);background-repeat: no-repeat;background-position: center;}
+ .calendarjs .controls .cancel{float: right;background-image: url(./img/cancel.svg);background-repeat: no-repeat;background-position: center;}
+.calendarjs .controls .today{width:0;height: 0;padding: 4px;border-radius: 50%;background:#ddd;border:thin solid #bbb;display: inline-block;margin: auto 8%;vertical-align: text-top}
 
- #calendarjs .prev, #calendarjs .next{color: lightgray}
- #calendarjs .current{color: white}
- #calendarjs .active{color: white;background-color: orange;border-radius: 3px}
+ .calendarjs table td, .calendarjs table th{padding: 4px 6px;text-align: center}
 /*************************************/
+
+/******************* CALENDARJS THEMES ******************/
+.calendarjs.light{background-color: #f6f6f6}
+.calendarjs.dark{background-color: #666;}
+
+.calendarjs.dark .calendarjs-tip.top{border-color: transparent transparent #666 transparent}
+.calendarjs.dark .calendarjs-tip.bottom{border-color: #666 transparent transparent transparent;}
+
+.calendarjs.light .calendarjs-tip.top{border-color: transparent transparent #f6f6f6 transparent;}
+.calendarjs.light .calendarjs-tip.bottom{border-color: #f6f6f6 transparent transparent transparent;}
+
+.calendarjs.dark .month-selector{color: white;border-radius: 6px 6px 0 0}
+.calendarjs.dark .year-selector{color: white;}
+
+.calendarjs.light .month-selector{color: grey;border-radius: 6px 6px 0 0}
+.calendarjs.light .year-selector{color: grey;}
+
+.calendarjs.light table{background-color: #e1e1e1;}
+.calendarjs.light th{color:  #777}
+.calendarjs.light .prev, .calendarjs.light .next{color: #acacac}
+.calendarjs.light .current{color: grey}
+.calendarjs.light .active{color: white;background-color: lightseagreen;border-radius: 3px}
+
+.calendarjs.dark table{background-color: #7a7a7a;}
+.calendarjs.dark th{color:  #f2f2f2}
+.calendarjs.dark .prev, .calendarjs.dark .next{color: #a9a9a9}
+.calendarjs.dark .current{color: #eee}
+.calendarjs.dark .active{color: white;background-color: orange;border-radius: 3px}
+/********************************************************/
